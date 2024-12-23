@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tobias Livetti</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="logo/favicon.png" type="image/png">
+    <script src="https://kit.fontawesome.com/48b475c2bb.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <img src="logo/logoBeigeSINNOMBRE.png" class="logoNormal">
+                <img src="logo/logoBeige.png" class="logoHover">
+            </div>
+            
+            <div class="desplegable">
+                <div class="menuListaD">
+                    <a href="#sobre-mi" class="item">Sobre mí</a>
+                    <a href="#proyectos">Mis proyectos</a>
+                    <a href="#contacto">Contacto</a>
+                </div>
+                <div class="menuIcon" onclick="toggleMenu()">
+                    <div class="linea"></div>
+                    <div class="linea"></div>
+                    <div class="linea"></div>
+                </div>
+            </div>
+        </div>
+            <nav class="mobile">
+                <div class="menuListaM">
+                    <a href="#sobre-mi">Sobre mí</a>
+                    <a href="#proyectos">Mis proyectos</a>
+                    <a href="#contacto">Contacto</a>
+                </div>
+            </nav>
+    </header>
+
+    <div class="separador"></div>
+    <section id="hero">
+        <h1>Tobias Livetti</h1>
+        <p> <span class="typed"></span></p>
+    </section>
+    
+    <section id="sobre-mi">
+            <div class="columnas">
+
+                <div class="containerFoto">
+                    <img src="logo/logoBeige.png" id="logosm">
+                </div>
+                <div class="texto">
+                    <h2>Conoce más sobre mí!</h2>
+                    <p>Soy un <strong>programador</strong> y <strong>diseñador</strong> con experiencia en robótica, programación y diseño web desde hace 2 años. Vivo en <strong>Buenos Aires, Argentina</strong>, me apasiona todo lo relacionado con la <strong>tecnología</strong> y soy muy <strong>autodidacta</strong>. Mis conocimientos son Óptimos en <strong>Photoshop, Paint toolsai2</strong> y <strong>Arduino</strong>, buenos en <strong>HTML, CSS</strong> y <strong>JavaScript</strong>, me encuentro estudiando más sobre el back-end de las páginas web para profundizar más en herramientas como MySQL o PHP. En el año 2024 espero recibirme de <strong>Técnico en Informática Personal y Profesional</strong> en la escuela Técnico 8 "Almafuerte" de Lanús y planeo ampliar mi conocimiento como desarrollador en la Universidad</p>
+                </div>
+
+            </div>
+
+            <div class="columnas">
+
+                <div class="softwares">
+                    <div class="logos">
+                    <img src="media/softwares/photoshop.png" alt="">
+                    <img src="media/softwares/premiere.png" alt="">
+                    <img src="media/softwares/JavaScript.png" alt="">
+                    </div>
+                    <div class="logos">
+                    <img src="media/softwares/arduino.png" alt="">
+                    <img src="media/softwares/css.png" alt="">
+                    <img src="media/softwares/html.png" alt="">
+                    </div>
+                </div>
+                <div class="containerTitulo">
+                    <img src="logo/software.png" class="titulo">
+                </div>
+
+            </div>
+
+    </section>
+
+    <section id="proyectos">
+        <div class="container">
+
+            <h2>Mis Proyectos</h2>
+            <div class="cubos">
+
+                <div class="presentacion">
+                    <h3>Casa domotica</h3>
+                    <a href=""><button>+ Info</button></a>
+                </div>
+
+                <div class="presentacion">
+                    <h3>BB-8</h3>
+                    <a href="link/BB-8pdf.pdf"><button>+ Info</button></a>
+                </div>
+
+                <div class="presentacion">
+                    <h3>Páginas de<br>demostración</h3>
+                    <a href=""><button>+ Info</button></a>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+
+    <footer id="contacto">
+        <div class="container">
+
+            <div class="informacion">
+                <img src="media/folder-solid.png" alt="">
+                <h4>Información</h4>
+                <p>Descarga mi Curriculum Vitae <br> <a href="link/CurriculumVitae.pdf">dando click aquí</a></p>
+            </div>
+
+            <div class="contacto">
+                <img src="media/phone-solid.png" alt="">
+                <h4>Contacto</h4>
+                <p> Presione <a href="mailto:tobiaslivetti@gmail.com"> aquí para contactarme</a></p>
+            </div>
+
+        </div>
+
+        <div class="copy">
+            <p>&copy; 2023 Tobias Livetti</p>
+        </div>
+
+    </footer>
+
+    <script src="typed.umd.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

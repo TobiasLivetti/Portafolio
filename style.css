@@ -1,0 +1,564 @@
+*{
+    box-sizing: border-box;
+    font-family: poppinsRegular;
+}
+
+@font-face {
+    font-family: poppinsRegular;
+    src: url(fonts/Poppins-Regular.ttf);
+}
+
+@font-face {
+    font-family: poppinsBold;
+    src: url(fonts/Poppins-Bold.ttf);
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Roboto',sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+h1{ font-size: 3.5em; font-family: poppinsBold;}
+h2{ font-size: 2.7em; font-family: poppinsBold;}
+h3{ font-size: 2em; font-family: poppinsBold;}
+p{ font-size: 1.25em;}
+ul{ list-style: none;}
+.dorado{ color: #deb16d;}
+
+.container{
+    max-width: 1100px;
+    margin: auto;
+    justify-content: space-between;
+}
+
+header{
+    background-color: #131313;
+    z-index: 1;
+}
+
+.logo img{
+    width: 145px;
+    margin: 0;
+    padding: 5px 5px;
+}
+
+.logoHover{
+    display: none;
+}
+
+header .container{
+    display: flex;
+    align-items: center;
+    padding: 0 35px;
+}
+
+header .menuIcon {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+header .linea {
+    width: 25px;
+    height: 3px;
+    background-color: #deb16d;
+    margin: 3px 0;
+    transition: 0.4s;
+    transform-origin: right;
+}
+
+
+.menuIcon.active .linea:nth-child(1) {
+    transform: rotate(-45deg);
+}
+.menuIcon.active .linea:nth-child(2) {
+    opacity: 0;
+}
+.menuIcon.active .linea:nth-child(3) {
+    transform: rotate(45deg);
+}
+  
+
+header .mobile{
+    width: 100%;
+    height: 0;
+    overflow: hidden;
+    pointer-events: none;
+    transition: all 0.5s ease;
+
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+}
+header .mobile.activo{
+    width: 100%;
+    pointer-events: auto;
+    height: 23vh;
+}
+
+header .menuListaD{
+    display: none;
+}
+
+header .menuListaM{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+header a{
+    margin: 0.7em 0;
+    text-decoration: none;
+    font-weight: bold;
+    color: #efeded;
+}
+
+header a:hover{
+    color: #deb16d;
+}
+
+#hero{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    height: 90vh;
+    color: #fafafa;
+    background-image: linear-gradient(
+        0deg,
+        rgba(0, 0, 0, 0.5),
+        rgba(0, 0, 0, 0.5)
+    )
+    ,url("media/hero2.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+#hero h1{
+    font-family: none;
+    letter-spacing: 0px;
+    font-size: 6em;
+    margin-bottom: 15px;
+}
+
+#hero p{
+    color: #deb16d;
+    text-shadow: 0px 0px 5px #131313;
+}
+
+#sobre-mi #logosm, #sobre-mi .titulo{
+    display: none;
+}
+
+#sobre-mi{
+    text-align: center;
+    padding: 200px 12px;
+    padding-top: 150px;
+}
+
+#sobre-mi p{
+    margin: 60px 15px;
+    line-height: 1.35;
+}
+
+.softwares{
+    margin: auto;
+    padding: 0;
+}
+
+.softwares img{
+    width: 100px;
+    margin: 20px;
+    transition: 0.5s;
+}
+
+.softwares img:hover{
+    transform: scale(1.3);
+    /*filter: drop-shadow( 10px 10px 1px rgba(0, 0, 0, 0.156));
+    OPCION 1*/
+
+    filter: drop-shadow( 0px 0px 6px rgba(0, 0, 0, 0.401));
+}
+
+#proyectos{
+    background-color: #131313;
+    color: #fafafa;
+    text-align: center;
+}
+
+#proyectos .container{
+    padding: 130px 0px;
+}
+
+#proyectos h2{
+    margin-top: 0px;
+    font-size: 3.2em;
+}
+
+#proyectos button{
+    font-size: 0.9em;
+    font-weight: bold;
+    padding: 10px 25px;
+    border-radius: 10px;
+    border: 0px;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.608);
+    background-color: #deb16d;
+    transition: 0.5s;
+}
+
+#proyectos button:hover{
+    transform: scale(1.1);
+    background-color: #b28748;
+}
+
+#proyectos .presentacion{
+    background-size: cover;
+    background-position: center center;
+    padding: 50px;
+    margin: 30px;
+    border-radius: 15px;
+}
+
+.presentacion:first-child{
+    background-image: linear-gradient(
+        0deg,
+        rgba(0, 0, 0, 0.5),
+        rgba(0, 0, 0, 0.5)
+    )
+    ,url("media/proyectos/casa.jpeg");
+}
+
+.presentacion:nth-child(2){
+    background-image: linear-gradient(
+        0deg,
+        rgba(0, 0, 0, 0.5),
+        rgba(0, 0, 0, 0.5)
+    )
+    ,url("media/proyectos/bb8.jpeg");
+}
+
+.presentacion:nth-child(3){
+    background-image: linear-gradient(
+        0deg,
+        rgba(0, 0, 0, 0.5),
+        rgba(0, 0, 0, 0.5)
+    )
+    ,url("media/proyectos/paginaDeDemostracion.gif");
+}
+
+
+footer{
+    background-color: #deb16d;
+    text-align: center;
+}
+
+footer .container{
+    padding: 40px;
+    color: #fafafa;
+}
+
+footer img{
+    width: 20px;
+}
+
+footer h4{
+    display: inline;
+    font-size: 1.6em;
+    margin: 0px 13px;
+}
+
+footer .container p{
+    font-size: 1.07em;
+}
+
+footer .contacto .informacion{
+    margin: 50px;
+}
+
+footer a{
+    color: #fafafa;
+    text-decoration: underline;
+}
+
+footer .email{
+    display: flex;
+    margin: 0;
+}
+
+footer .copy{
+    background-color: #b28748;
+    color: #deb16d;
+    text-align: center;
+    padding: 20px;
+    width: 100%;
+    height: 100px;
+}
+
+@media(min-width: 600px){
+    header{
+        position: fixed;
+        width: 100%;
+    }
+
+    header .container{
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    
+    .logo{
+        position: relative;
+    }
+
+    .logo img{
+        display: block;
+        width: 130px;
+        padding: 0px 0 0px 30px;
+        transition: opacity 0.4s ease-in-out;
+    }
+
+
+    .logoHover {
+        position: absolute;
+        top: 0;
+        left: 0;
+        opacity: 0;
+        transform-origin: left;
+    }
+
+    .logoNormal {
+        position: relative;
+        top: 0;
+        left: 0;
+    }
+
+    .logo:hover .logoHover {
+        opacity: 1;
+    }
+
+    .logo:hover .logoNormal{
+        opacity: 0;
+    }
+
+
+    header .desplegable{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    header .mobile{
+        display: none;
+        pointer-events: none;
+    }
+    
+    header .menuListaD{
+        display: flex;
+        align-items: center;
+        white-space: nowrap;
+        width: 0;
+
+        overflow: hidden;
+        pointer-events: none;
+        transition: all 0.5s ease;
+    }
+
+    header .menuListaD.active{
+        text-align: center;
+        pointer-events: auto;
+        width: 360px;
+        margin-right: 2vw;
+    }
+    
+    header a{
+        margin: 0 0.7em;
+        padding: 8px 11px;
+        margin: 0 2px;
+        border-radius: 3px;
+        text-decoration: none;
+        font-weight: bold;
+        color: #efeded;
+        transition: all 0.5s ease;
+        transform-origin: bottom;
+    }
+
+    header a:hover{
+        /*background-color: #deb16d;*/
+        background-color: rgba(67, 67, 67, 0.501);
+        color: white;
+    }
+    
+    .separador{
+        width: 100%;
+        height: 75px;;
+    }
+
+    #sobre-mi{
+        padding: 100px 0;
+    }
+
+    #sobre-mi .columnas{
+        display: flex;
+        background-color: #6b6b6b2c;
+        padding: 0;
+    }
+
+    #sobre-mi .columnas:first-child{
+        margin: 0 0 0 auto;
+        max-width: calc(100vw - 17%);;
+        border-top-left-radius: 15px;
+        border-bottom-left-radius: 15px;
+        margin-bottom: 50px;
+    }
+
+    #sobre-mi .containerFoto{
+        display: flex;
+        align-items: center;
+        background-color: #131313;
+        width: 250px;
+        padding: 15px;
+        border-radius: 15px;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.688);
+        transition: transform 0.8s;
+    }
+
+    #sobre-mi .columnas:first-child:hover .containerFoto{
+        transform: rotateX(10deg) rotateY(-15deg) rotateZ(-1deg);
+    }
+
+    #sobre-mi #logosm{
+        display: flex;
+        width: 100%;
+    }
+
+    #sobre-mi .texto{
+        text-align: left;
+        padding: 20px 40px;
+        max-width: calc(70vw - 10%);
+        margin-right: auto;
+    }
+
+    #sobre-mi h2{
+        margin: 10px 0;
+        font-size: 2em;
+    }
+    #sobre-mi p{
+        margin: 10px 0 ;
+        font-size: 1em;
+    }
+
+
+    #sobre-mi .columnas:nth-child(2){
+        margin: 0 auto 0 0;
+        max-width: calc(100vw - 17%);
+        border-top-right-radius: 15px;
+        border-bottom-right-radius: 15px;
+    }
+
+    #sobre-mi .containerTitulo{
+        display: flex;
+        align-items: center;
+        background-color: #131313;
+        width: 150px;
+        padding: 25px;
+        border-radius: 15px;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.688);
+        transition: transform 0.8s;
+    }
+
+    #sobre-mi .columnas:nth-child(2):hover .containerTitulo{
+        transform: rotateX(10deg) rotateY(15deg) rotateZ(1deg);
+    }
+
+    #sobre-mi .titulo{
+        display: flex;
+        width: 100%;
+    }
+
+    #sobre-mi .softwares img{
+        width: 80px;
+        margin: 20px 32px 20px 0;
+    }
+
+    #sobre-mi .softwares{
+        max-width: calc(70vw - 10%);
+        margin-left: auto;
+        margin-right: 20px;
+        display: flex;
+        align-items: center;
+    }
+
+    #sobre-mi .logos{
+        display: flex;
+        flex-wrap: nowrap;
+    }
+
+    #proyectos .presentacion{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        box-sizing: border-box;
+        margin: 30px 15px;
+        flex: 1;
+    }
+
+    #proyectos .cubos{
+        display: flex;
+        justify-content: center; 
+    }
+    
+    #proyecotos h3{
+        margin: auto;
+    }
+
+    
+
+    footer .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    footer .informacion,footer .contacto {
+        flex: 1;
+    }
+
+    footer .copy {
+        margin-top: 20px;
+    }
+
+}
+
+
+
+@media (max-width: 1050px) {
+
+    #sobre-mi .columnas:nth-child(2),#sobre-mi .columnas:first-child{
+        max-width: calc(100vw - 10%);
+    }
+
+    #sobre-mi .softwares{
+        display: block;
+        margin: auto;
+    }
+
+
+}
+
+@media(max-width: 850px){
+    #proyectos .cubos{
+        display: block;
+        max-width: 570px;
+        margin: 20px auto;
+    }
+
+    
+}
+
+
